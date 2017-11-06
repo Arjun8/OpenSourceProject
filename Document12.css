@@ -1,0 +1,101 @@
+.navbar-default
+{
+	background-color:#ff8c00;
+}
+#logo
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	float:left;
+	margin-right: 10px;
+	font-size: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	letter-spacing: 9px;
+	font-weight: bold;
+}
+#logo:hover{
+	color:white;
+	text-decoration:none; 
+}
+body
+{
+	padding-top: 80px;
+	background-color:#FE9079;
+}
+.nav_item
+{
+	margin-left: 25px;
+	float: left;
+	margin-top: 20px;
+}
+.center
+{
+	text-align:center;
+
+}
+h1,h2,h3,h4
+{
+	line-height:1;
+}
+h1
+{
+	font-size: 3em;
+	letter-spacing: -2px;
+	margin-bottom: center;
+	text-align: center;
+}
+h2
+{
+	font-size: 1.2em;
+	margin-bottom: 30px;
+	text-align: center;
+	font-weight: normal;
+	color: #777;
+}
+.left
+{
+	text-align: left;
+	letter-spacing: .5px;
+}
+.footer
+{
+	margin-top: 25px;
+	border-top: 1px solid #eaeaae;
+	color: #777;
+}
+.user_info_centre
+{
+	margin-top:10px;
+}
+.gravatar
+{
+	border-radius:10px;
+}
+.well
+{
+	background-color: #ededed;
+}
+input,textarea,select,uneditable-input
+{
+	border: 1px solid #d2d2d2;
+	border-radius: 5px;
+	width:100%;
+	margin-bottom:15px;
+}
+input
+{
+	height:auto !important;
+}
+span.picture
+{
+	margin-top:10px;
+	input
+	{
+	border :0;
+	}
+}
+.show_wallpaper
+{
+	margin: 10px 10px 10px 10px;
+}
