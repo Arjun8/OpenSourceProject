@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HDWallpapers</title>
+    <title>Novice Critics</title>
     <link rel="stylesheet" type="text/css" href="Document12.css">
     <link rel="stylesheet" type="text/css" href="style-sign.css">
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
@@ -13,73 +13,35 @@
     exit();
 }?>
   </head>
-  <body>
+  <body style="background-color:#2E2E2E ">
     <div class="container" style="margin-top: 40px;">
-      <div class="" style="text-align: center;font-family: verdana"><h1>Choose a Title</h1></div>      
-    <div class="row">
-  <div class="col-md-4">
-    <div class="thumbnail">
-      <a href="review.php">
-        <img src="w3images/the-50-coolest-book-covers-7.jpg" alt="Lights" style="width:100%">
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="thumbnail">
-      <a href="/w3images/the-50-coolest-book-covers-7.jpg">
-        <img src="w3images/the-50-coolest-book-covers-9.jpg" alt="Nature" style="width:100%">
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="thumbnail">
-      <a href="/w3images/the-50-coolest-book-covers-7.jpg">
-        <img src="w3images/the-50-coolest-book-covers-18.jpg" alt="Fjords" style="width:100%">
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
-<div class="row">
-  <div class="col-md-4">
-    <div class="thumbnail">
-      <a href="/w3images/the-50-coolest-book-covers-7.jpg">
-        <img src="w3images/the-50-coolest-book-covers-20.jpg" alt="Lights" style="width:100%">
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="thumbnail">
-      <a href="/w3images/the-50-coolest-book-covers-7.jpg">
-        <img src="w3images/the-50-coolest-book-covers-31.jpg" alt="Nature" style="width:100%">
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
-      </a>
-    </div>
-  </div>
-  <div class="col-md-4">
-    <div class="thumbnail">
-      <a href="/w3images/the-50-coolest-book-covers-7.jpg">
-        <img src="w3images/the-50-coolest-book-covers-35.jpg" alt="Fjords" style="width:100%">
-        <div class="caption">
-          <p>Lorem ipsum...</p>
-        </div>
-      </a>
-    </div>
-  </div>
-</div>
+      <div class="" style="text-align: center;font-family: verdana"><h1 style="color:#33b5e5">Choose a Title</h1></div>     
+      <div class="row" style="text-align:center;">
+      
+<?php 
+$email_1 = "Select id,title,author,add1 from images1 order by id desc";
+$exe = mysqli_query($con,$email_1) or die(mysqli_error($con));
+if(mysqli_num_rows($exe)==0)
+{
+  echo"No Title Exists";
+  }
+else
+{
+  while($row = mysqli_fetch_array($exe)) {
+      echo '
+        <div class="col-md-3 style="margin-left=20px;" >
+            <h3 style="text-align:center;color:#33b5e5">'.ucwords($row[1]).'</br> By</br> '.ucwords($row[2]).'</h3>
+            <div class="thumbnail">
+<form action="review.php" method="POST">
+            <input type="image" name="hello" src='.$row[3].' value='.$row[3].' alt="Lights" style="width:100%">
+            </form>
+            </div>
+          </div> 
+           ';}
+  
+}
+?>
+</div>       
 </div>
 <?php include("includes/footer.html");?>
   </body>

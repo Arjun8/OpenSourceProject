@@ -1,0 +1,29 @@
+<?php 
+$email_1 = "Select title,author,add1 from images1";
+$exe = mysqli_query($con,$email_1) or die(mysqli_error($con));
+if(mysqli_num_rows($exe)==0)
+{
+  echo"No Title Exists";
+  header("Location:/p/book.php");
+}
+else
+{
+  while($row = mysqli_fetch_array($exe)) {
+      echo '
+      <div class="container">
+      <div class="row">
+
+<div class="col-md-4">
+<h1 style="text-align:center">'$row[0]'</h1>By
+      <h2 style="text-align:center">'$row[1]'</h2>
+
+    <div class="thumbnail">
+    <img src='.$row[2].' alt="Lights" style="width:100%">
+    </div>
+</div>        
+       </div>
+       </div>
+      ';}
+  
+}
+?>

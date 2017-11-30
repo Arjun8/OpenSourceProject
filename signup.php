@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>HDWallpapers</title>
+    <title>NoviceCritics</title>
     <link rel="stylesheet" type="text/css" href="Document12.css">
     <link rel="stylesheet" type="text/css" href="style-sign.css">
     <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
@@ -23,7 +23,19 @@
      			</div>
      			<div class="form-group ">
      				<label for="email" id="email_er">Email :</label>
-     				<input type="email" id="email" placeholder="Email" maxlength="35" class="form-control " name="email" required>
+                    <?php
+                    $d="Enter your mail"; 
+                    if(isset($_POST['submit1']))
+                    {
+                        $d=$_POST['email1'];
+                    
+                    echo'<input type="email" id="email" placeholder="Email" maxlength="35" class="form-control " name="email" required value="'.$d.'"">'; 
+                }
+                else
+                {
+                    echo'<input type="email" id="email" placeholder="Email" maxlength="35" class="form-control " name="email" required value="Hello">'; 
+                }
+                ?>
      			</div>
      			<div class="form-group">
      				<label for="passwd" id="passwd_er"> Password :</label>

@@ -21,7 +21,7 @@
 body
 {
 	padding-top: 80px;
-	background-color:#FE9079;
+	background-color:#2E2E2E;
 }
 .nav_item
 {
@@ -37,6 +37,7 @@ body
 h1,h2,h3,h4
 {
 	line-height:1;
+
 }
 h1
 {
@@ -44,6 +45,7 @@ h1
 	letter-spacing: -2px;
 	margin-bottom: center;
 	text-align: center;
+	font-color: #33b5e5;
 }
 h2
 {
@@ -51,7 +53,7 @@ h2
 	margin-bottom: 30px;
 	text-align: center;
 	font-weight: normal;
-	color: #777;
+	font-color: #33b5e5;
 }
 .left
 {
